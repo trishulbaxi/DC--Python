@@ -1,7 +1,7 @@
 #####
 # Created by: 	  Trishul Baxi
 # Project: 	      Data Center Python automation
-# Calssification: Personal Project
+# Calssification:  Personal Project
 #####
 
 
