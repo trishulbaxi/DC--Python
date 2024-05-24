@@ -4,6 +4,7 @@
 # Calssification:  Personal Project
 #####
 
+# Configuring OSPF on one device
 
 from netmiko import ConnectHandler  # use netmiko for SSH connections.
 from getpass import getpass  # User needs to lodgin. Avoids storing passwords in plain text.
