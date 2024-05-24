@@ -24,13 +24,40 @@ net_connect = ConnectHandler(**sw1)
 net_connect.enable()
 
 cmd = '''
+feature ospf
+
 int loop 0 
-Description Python Loopback
+Description configured by Python 
 ip address 1.1.1.1 255.255.255.255 
+ip router ospf TEST-DC area 0
 
 int loop 100
-Description Python Loopback
+Description configured by Python 
 ip address 100.100.100.100 255.255.255.255
+ip router ospf TEST-DC area 0
+
+int eth1/53
+no sw
+Description configured by Python 
+ip address 192.168.30.1 255.255.255.252
+ip router ospf TEST-DC area 0
+ip ospf network point-to-point
+no ip ospf passive-interface
+no shut
+
+int eth1/54
+no sw
+Description configured by Python 
+ip address 192.168.31.1 255.255.255.252
+ip router ospf TEST-DC area 0
+ip ospf network point-to-point
+no ip ospf passive-interface
+no shut
+
+router ospf TEST-DC
+router-id 10.10.10.10
+passive-interface default
+
 '''
 output = net_connect.send_config_set(cmd.split('\n'))
 print (output)  # Print the output to your screen.
