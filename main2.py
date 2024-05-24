@@ -32,15 +32,15 @@ Description configured by Python
 ip address 1.1.1.1 255.255.255.255 
 ip router ospf TEST-DC area 0
 
-int loop 100
+int loop 99
 Description configured by Python 
 ip address 100.100.100.100 255.255.255.255
 ip router ospf TEST-DC area 0
 
 int eth1/53
 no sw
-Description configured by Python 
-ip address 192.168.30.1 255.255.255.252
+Description configured by Python - TO SPINE 1
+ip address 192.168.10.1 255.255.255.252
 ip router ospf TEST-DC area 0
 ip ospf network point-to-point
 no ip ospf passive-interface
@@ -48,8 +48,8 @@ no shut
 
 int eth1/54
 no sw
-Description configured by Python 
-ip address 192.168.31.1 255.255.255.252
+Description configured by Python - TO SPINE 2
+ip address 192.168.20.1 255.255.255.252
 ip router ospf TEST-DC area 0
 ip ospf network point-to-point
 no ip ospf passive-interface
