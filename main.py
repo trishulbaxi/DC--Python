@@ -10,13 +10,13 @@ from getpass import getpass  # User needs to lodgin. Avoids storing passwords in
 
 password = getpass()   # create a variable to store the password input.
 
-# Define the device connection parameters in a list.
+# Define the device connection parameters in a dictionary.
 sw1 = {
     'device_type': "cisco_nxos",
     'ip': '192.168.90.3',
     'username': 'admin',
     'password': password,
-    #'secret': password,
+    #'secret': password,   # optional if you do not create a network-admin role on the Cisco device
 }
 
 # Connect to the device and apply the configuration.
