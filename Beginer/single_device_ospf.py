@@ -27,11 +27,6 @@ net_connect.enable()
 cmd = '''
 feature ospf
 
-int loop 0 
-Description configured by Python 
-ip address 1.1.1.1 255.255.255.255 
-ip router ospf TEST-DC area 0
-
 int loop 99
 Description configured by Python 
 ip address 100.100.100.100 255.255.255.255
