@@ -1,5 +1,8 @@
 from netmiko import ConnectHandler
 from getpass import getpass  # User needs to lodgin. Avoids storing passwords in plain text.
+import time
+
+start = time.time()  # start time of running this script
 
 password = getpass()   # create a variable to store the password input.
 
@@ -281,5 +284,6 @@ print (output)  # Print the output to your screen.
 
 #################
 
-
+end = time.time() # stop time of running this script
+print( f'Total execution time = {end-start} seconds')
 
