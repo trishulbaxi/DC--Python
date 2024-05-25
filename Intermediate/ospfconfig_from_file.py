@@ -46,10 +46,7 @@ spine2 = {
     #'secret': password,   # optional if you do not create a network-admin role on the Cisco device
 }
 
-spines = [spine1, spine2]
-leafs = [leaf1, leaf2, leaf3]
-
-#################
+#################cd
 
 #OSPF CONFIGURATION - INDIVIDUAL CONFIG FILES
 
