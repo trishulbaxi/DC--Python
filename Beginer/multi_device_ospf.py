@@ -48,6 +48,55 @@ leafs = [leaf1, leaf2, leaf3]
 
 #################
 
+# SPINE CONFIGURATION - OSPF
+
+#################
+
+# Configure OSPF on spines
+for devices in spines:
+    net_connect = ConnectHandler(**devices)
+    net_connect.enable()
+
+    cmd = '''
+    feature ospf
+
+    int loop 99
+    ip router ospf TEST-DC area 0
+
+    int eth1/1
+    no sw
+    ip router ospf TEST-DC area 0
+    ip ospf network point-to-point
+    no ip ospf passive-interface
+    no shut
+
+    int eth1/2
+    no sw
+    ip router ospf TEST-DC area 0
+    ip ospf network point-to-point
+    no ip ospf passive-interface
+    no shut
+
+     int eth1/3
+        no sw
+        ip router ospf TEST-DC area 0
+        ip ospf network point-to-point
+        no ip ospf passive-interface
+        no shut
+
+    router ospf TEST-DC
+    passive-interface default
+
+    '''
+    output = net_connect.send_config_set(cmd.split('\n'))
+    print (output)  # Print the output to your screen.
+
+#################
+
+# LEAF CONFIGURATION - OSPF
+
+#################
+
 # Configure OSPF on leafs
 for devices in leafs:
     net_connect = ConnectHandler(**devices)
@@ -82,7 +131,75 @@ for devices in leafs:
 
 #################
 
-#Configure individual loopbak ip addresses
+#SPINE CONFIGURATION - INDIVIDUAL IP ADDRESSING
+
+#################
+
+#Configure individual ip addresses
+net_connect = ConnectHandler(**spine1)
+net_connect.enable()
+
+cmd = ''' 
+int loop 99
+Description configured by Python 
+ip address 111.111.111.111/32
+
+int eth1/1
+Description configured by Python - TO LEAF 1
+ip address 192.168.10.2 255.255.255.252
+
+int eth1/2
+Description configured by Python - TO LEAF 2
+ip address 192.168.10.6 255.255.255.252
+
+int eth1/3
+Description configured by Python - TO LEAF 3
+ip address 192.168.10.10 255.255.255.252
+
+router ospf TEST-DC
+router-id 81.81.81.81
+
+'''
+output = net_connect.send_config_set(cmd.split('\n'))
+print (output)  # Print the output to your screen.
+
+#################
+
+#Configure individual ip addresses
+net_connect = ConnectHandler(**spine2)
+net_connect.enable()
+
+cmd = ''' 
+int loop 99
+Description configured by Python 
+ip address 122.122.122.122/32
+
+int eth1/1
+Description configured by Python - TO LEAF 1
+ip address 192.168.20.2 255.255.255.252
+
+int eth1/2
+Description configured by Python - TO LEAF 2
+ip address 192.168.20.6 255.255.255.252
+
+int eth1/3
+Description configured by Python - TO LEAF 3
+ip address 192.168.20.10 255.255.255.252
+
+router ospf TEST-DC
+router-id 82.82.82.82
+
+'''
+output = net_connect.send_config_set(cmd.split('\n'))
+print (output)  # Print the output to your screen.
+
+#################
+
+# LEAF CONFIGURATION - INDIVIDUAL IP ADDRESSING
+
+#################
+
+#Configure individual ip addresses
 net_connect = ConnectHandler(**leaf1)
 net_connect.enable()
 
@@ -108,7 +225,7 @@ print (output)  # Print the output to your screen.
 
 #################
 
-#Configure individual loopbak ip addresses
+#Configure individual ip addresses
 net_connect = ConnectHandler(**leaf2)
 net_connect.enable()
 
@@ -136,7 +253,7 @@ print (output)  # Print the output to your screen.
 
 #################
 
-#Configure individual loopbak ip addresses
+#Configure individual ip addresses
 net_connect = ConnectHandler(**leaf3)
 net_connect.enable()
 
