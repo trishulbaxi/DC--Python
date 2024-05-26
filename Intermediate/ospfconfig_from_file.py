@@ -57,7 +57,7 @@ net_connect = ConnectHandler(**spine1)
 net_connect.enable()
 
 # Apply interface & OSPF configuration & save to a variable to print on screen
-output = net_connect.send_config_from_file('spine1.txt')
+output = net_connect.send_config_from_file('configs/spine1.txt')
 print (output)  # Print the output to your screen.
 
 #################
@@ -67,7 +67,7 @@ net_connect = ConnectHandler(**spine2)
 net_connect.enable()
 
 # Apply interface & OSPF configuration & save to a variable to print on screen
-output = net_connect.send_config_from_file('spine2.txt')
+output = net_connect.send_config_from_file('configs/spine2.txt')
 print (output)  # Print the output to your screen.
 
 #################
@@ -81,7 +81,7 @@ net_connect = ConnectHandler(**leaf1)
 net_connect.enable()
 
 # Apply interface & OSPF configuration & save to a variable to print on screen
-output = net_connect.send_config_from_file('leaf1.txt')
+output = net_connect.send_config_from_file('configs/leaf1.txt')
 print (output)  # Print the output to your screen.
 
 #################
@@ -91,7 +91,7 @@ net_connect = ConnectHandler(**leaf2)
 net_connect.enable()
 
 # Apply interface & OSPF configuration & save to a variable to print on screen
-output = net_connect.send_config_from_file('leaf2.txt')
+output = net_connect.send_config_from_file('configs/leaf2.txt')
 print (output)  # Print the output to your screen.
 
 #################
@@ -101,7 +101,7 @@ net_connect = ConnectHandler(**leaf3)
 net_connect.enable()
 
 # Apply interface & OSPF configuration & save to a variable
-output = net_connect.send_config_from_file('leaf3.txt')
+output = net_connect.send_config_from_file('configs/leaf3.txt')
 print (output)  # Print the output to your screen.
 
 #################

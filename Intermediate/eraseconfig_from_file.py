@@ -60,7 +60,7 @@ for devices in dc:
     net_connect.enable()
 
     # Apply interface & OSPF configuration & save to a variable to print on screen
-    output = net_connect.send_config_from_file('erase.txt')
+    output = net_connect.send_config_from_file('configs/erase.txt')
     print(output)  # Print the output to your screen.
 
 #################
