@@ -1,5 +1,5 @@
 from netmiko import ConnectHandler
-from getpass import getpass  # User needs to lodgin. Avoids storing passwords in plain text.
+from getpass import getpass  # User needs to login. Avoids storing passwords in plain text.
 import time
 
 start = time.time()  # start time of running this script
@@ -46,60 +46,65 @@ spine2 = {
     #'secret': password,   # optional if you do not create a network-admin role on the Cisco device
 }
 
-#################cd
+#################
 
-#OSPF CONFIGURATION - INDIVIDUAL CONFIG FILES
+# INTERFACE & OSPF CONFIGURATION - SPINE
 
 #################
 
-#Configure individual ip addresses
+# Connect to devices & enter enable mode
 net_connect = ConnectHandler(**spine1)
 net_connect.enable()
 
+# Apply interface & OSPF configuration & save to a variable to print on screen
 output = net_connect.send_config_from_file('spine1.txt')
 print (output)  # Print the output to your screen.
 
 #################
 
-#Configure individual ip addresses
+# Connect to devices & enter enable mode
 net_connect = ConnectHandler(**spine2)
 net_connect.enable()
 
+# Apply interface & OSPF configuration & save to a variable to print on screen
 output = net_connect.send_config_from_file('spine2.txt')
 print (output)  # Print the output to your screen.
 
 #################
 
-# LEAF CONFIGURATION
+# INTERFACE & OSPF CONFIGURATION - LEAF
 
 #################
 
-#Configure individual ip addresses
+# Connect to devices & enter enable mode
 net_connect = ConnectHandler(**leaf1)
 net_connect.enable()
 
+# Apply interface & OSPF configuration & save to a variable to print on screen
 output = net_connect.send_config_from_file('leaf1.txt')
 print (output)  # Print the output to your screen.
 
 #################
 
-#Configure individual ip addresses
+# Connect to devices & enter enable mode
 net_connect = ConnectHandler(**leaf2)
 net_connect.enable()
 
+# Apply interface & OSPF configuration & save to a variable to print on screen
 output = net_connect.send_config_from_file('leaf2.txt')
 print (output)  # Print the output to your screen.
 
 #################
 
-#Configure individual ip addresses
+# Connect to devices & enter enable mode
 net_connect = ConnectHandler(**leaf3)
 net_connect.enable()
 
+# Apply interface & OSPF configuration & save to a variable
 output = net_connect.send_config_from_file('leaf3.txt')
 print (output)  # Print the output to your screen.
 
 #################
 
-end = time.time() # stop time of running this script
-print( f'Total execution time = {end-start} seconds')
+end = time.time() # Stop time of running this script
+print( f'TOTAL EXECUTION TIME = {end-start} seconds')
