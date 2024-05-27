@@ -66,9 +66,9 @@ devices_and_configs = {
 #################
 
 for device_name, config_file in devices_and_configs.items():
-    device_info = get_device_info(inventory, device_name)
-    config_commands = read_config(config_file)
-    connect_and_configure(device_info, config_commands, password)
+     device_info = get_device_info(inventory, device_name)
+     config_commands = read_config(config_file)
+     connect_and_configure(device_info, config_commands, password)
 
 #################
 end = time.time() # Stop time of running this script
