@@ -113,5 +113,7 @@ print (output)  # Print the output to your screen.
 
 #################
 
-end = time.time() # Stop time of running this script
+end = time.time() # Stop time of executing this script
 print( f'TOTAL EXECUTION TIME = {end-start} seconds')
+
+#################
