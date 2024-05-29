@@ -61,7 +61,7 @@ password = getpass()
 
 #################
 
-# Device and config file mappings
+# Mapping the config files to the devices
 devices_and_configs = {
     'leaf1': 'configs/leaf1.txt',
     'leaf2': 'configs/leaf2.txt',
