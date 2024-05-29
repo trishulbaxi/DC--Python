@@ -113,7 +113,8 @@ print (output)  # Print the output to your screen.
 
 #################
 
+# Final execution time
 end = time.time() # Stop time of executing this script
-print( f'TOTAL EXECUTION TIME = {end-start} seconds')
+print( f'TOTAL EXECUTION TIME = {end-start:.2f} seconds')
 
 #################
