@@ -80,7 +80,7 @@ for device_name, config_file in devices_and_configs.items():
 #################
 
 # Final execution time
-end = time.time() # Stop time of running this script
+end = time.time() # Stop time of executing this script
 print( f'TOTAL EXECUTION TIME = {end-start:.2f} seconds')
 
 #################
