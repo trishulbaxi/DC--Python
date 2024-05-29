@@ -1,10 +1,17 @@
+#####
+# Created by: 	  Trishul Baxi
+# Project: 	      Data Center Python automation
+# Calssification:  Personal Project
+#####
+
+
 import time
 import yaml
 from netmiko import ConnectHandler
 from getpass import getpass  # User needs to login. Avoids storing passwords in plain text.
 
 
-start = time.time()  # start time of running this script
+start = time.time()  # start time of executing this script
 
 #################
 
@@ -12,7 +19,7 @@ start = time.time()  # start time of running this script
 with open('inventory.yaml', 'r') as file:
     inventory = yaml.safe_load(file)
 
-# Check to confirm python can read the yaml file
+# Check to confirm python has read the yaml file correctly
 print(inventory)
 
 #################
@@ -49,7 +56,7 @@ def connect_and_configure(device_info, config_commands,  password):
 
 #################
 
-# create a variable to store the password input.
+# create a variable to store the password from user input.
 password = getpass()
 
 #################
@@ -71,5 +78,9 @@ for device_name, config_file in devices_and_configs.items():
      connect_and_configure(device_info, config_commands, password)
 
 #################
+
+# Final execution time
 end = time.time() # Stop time of running this script
-print( f'TOTAL EXECUTION TIME = {end-start} seconds')
+print( f'TOTAL EXECUTION TIME = {end-start:.2f} seconds')
+
+#################

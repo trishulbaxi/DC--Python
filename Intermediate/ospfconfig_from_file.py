@@ -9,7 +9,7 @@ from netmiko import ConnectHandler
 from getpass import getpass  # User needs to login. Avoids storing passwords in plain text.
 import time
 
-start = time.time()  # start time of running this script
+start = time.time()  # start time of executing this script
 
 password = getpass()   # create a variable to store the password input.
 
