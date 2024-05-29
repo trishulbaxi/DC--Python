@@ -72,6 +72,7 @@ devices_and_configs = {
 
 #################
 
+# Applying the config to the swithes from the dictionary above
 for device_name, config_file in devices_and_configs.items():
      device_info = get_device_info(inventory, device_name)
      config_commands = read_config(config_file)
