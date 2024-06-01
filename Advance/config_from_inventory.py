@@ -10,6 +10,7 @@ import yaml
 from netmiko import ConnectHandler
 from getpass import getpass  # User needs to login. Avoids storing passwords in plain text.
 
+#################
 
 start = time.time()  # start time of executing this script
 
