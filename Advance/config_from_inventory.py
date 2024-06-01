@@ -37,7 +37,7 @@ def get_device_info(inventory, device_name):
 
 #################
 
-# Read configuration commands from a text file an return the contents
+# Read configuration commands from a text file and return the contents
 def read_config(file_name):
     with open(file_name, 'r') as file:
         return file.read().splitlines()
