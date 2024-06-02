@@ -1,3 +1,4 @@
+
 no router ospf TEST-DC
 
 no int lo 99

@@ -1,6 +1,7 @@
 #####
-# Created by: 	  Trishul Baxi
-# Project: 	      Data Center Python automation
+# Created by: 	   Trishul Baxi
+# Project: 	   Data Center Python automation
+# Purpose: 	   Learning
 # Calssification:  Personal Project
 #####
 
