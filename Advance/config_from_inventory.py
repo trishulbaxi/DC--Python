@@ -48,7 +48,7 @@ def read_config(file_name):
 
 # Function to connect and apply configuration
 def connect_and_configure(device_info, config_commands,  password):
-        # Update the device_info dictionary with the password
+    # Update the device_info dictionary with the password
         device_info['password'] = password
         connection = ConnectHandler(**device_info)
         connection.enable()
