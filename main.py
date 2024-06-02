@@ -6,7 +6,7 @@
 
 
 from netmiko import ConnectHandler  # use netmiko for SSH connections.
-from getpass import getpass  # User needs to lodgin. Avoids storing passwords in plain text.
+from getpass import getpass  # User needs to login. Avoids storing passwords in plain text.
 
 password = getpass()   # create a variable to store the password input.
 
