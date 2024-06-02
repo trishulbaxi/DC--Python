@@ -11,7 +11,7 @@ import time
 
 start = time.time()  # start time of executing this script
 
-password = getpass()   # create a variable to store the password input.
+password = getpass()   # create a variable to store the password from input.
 
 leaf1 = {
     'device_type': "cisco_nxos",

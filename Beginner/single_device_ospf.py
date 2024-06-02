@@ -10,7 +10,7 @@
 from netmiko import ConnectHandler  # use netmiko for SSH connections.
 from getpass import getpass  # User needs to lodgin. Avoids storing passwords in plain text.
 
-password = getpass()   # create a variable to store the password input.
+password = getpass()   # create a variable to store the password from input.
 
 # Define the device connection parameters in a dictionary.
 sw1 = {
