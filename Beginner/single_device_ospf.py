@@ -2,7 +2,7 @@
 # Created by: 	   Trishul Baxi
 # Project: 	   Data Center Python automation
 # Purpose: 	   Learning
-# Calssification:  Personal Project
+# Classification:  Personal Project
 #####
 
 # Configuring OSPF on one device
