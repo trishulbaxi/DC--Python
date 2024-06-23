@@ -1,9 +1,0 @@
-𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐜 𝐌𝐞𝐭𝐡𝐨𝐝𝐬:
-
-In this section, I explore two advanced methods for enhancing the Python code developed in earlier stages of this project.
-
-Due to intellectual property concerns, the source code has been removed from this document.
-
-As indicated in the README file, if you are a recruiter or hiring manager interested in this project, I am available to provide a walkthrough and demonstration. Please reach out to me via LinkedIn.
-
-As of the latest update, there have been at least 5 clones of this repository. I hope that those who have cloned the repository have found the code beneficial for their learning journey. Feedback from users is always welcome and appreciated.
