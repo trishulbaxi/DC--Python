@@ -1,7 +1,23 @@
+
+𝐑𝐄𝐐𝐔𝐄𝐒𝐓 𝐀 𝐃𝐄𝐌𝐎:
+
+I am happy to demo this project in interviews for hiring managers. Please reach out to me via my LinkedIn profile to schedule a demo or for further information.
+
+
+
+
 𝐀𝐁𝐎𝐔𝐓:
 
 
 This repository showcases the use of Python for network automation, specifically deploying an OSPF underlay on Cisco Nexus switches.
+
+
+
+
+Deploy:
+- Standardised OSPF configuration.
+- At scale.
+- Error free.
 
 
 
