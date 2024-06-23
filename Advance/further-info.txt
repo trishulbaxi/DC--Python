@@ -1,7 +1,0 @@
-In this section there are two advanced programatic methods of improving on the Python code from the previous stages.
-
-I have removed the source code in order to protect my IP (Intellectual Property).
-
-As mentioned in the README if you are a recruiter or hiring manager, I would be happy to walkthrough this project and do a demo. Please get in touch via LinkedIn.
-
-At the time of this update there have been atleast 5 clones. I hope they have found my code helpful in their learning journey. Perhaps they can share some feedback.
