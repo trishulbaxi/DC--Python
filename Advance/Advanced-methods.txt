@@ -1,4 +1,4 @@
-Advanced Programmatic Methods:
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐜 𝐌𝐞𝐭𝐡𝐨𝐝𝐬:
 
 In this section, I explore two advanced methods for enhancing the Python code developed in earlier stages of this project.
 
